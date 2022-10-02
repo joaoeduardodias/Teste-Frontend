@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 import { Smoke } from '../components/Background/Smoke'
 import { Star } from '../components/Background/Star'
 import { Header } from '../components/Header'
+import { Hero } from '../components/Hero'
 
 const Home: NextPage = () => (
   <>
@@ -16,6 +17,7 @@ const Home: NextPage = () => (
     <Star src="./Star6.png" top="101.56rem" left="76.31rem" />
 
     <Header />
+    <Hero />
   </>
 )
 
