@@ -7,5 +7,7 @@ interface StarProps {
 }
 
 export function Star({ left, top, src }: StarProps): JSX.Element {
-  return <Image src={src} position="absolute" left={left} top={top} />
+  return (
+    <Image src={src} zIndex="-1" position="absolute" left={left} top={top} />
+  )
 }
