@@ -4,6 +4,7 @@ import Link from 'next/link'
 export function Header(): JSX.Element {
   return (
     <Flex
+      as="header"
       w="90%"
       maxW="1140px"
       mx="auto"

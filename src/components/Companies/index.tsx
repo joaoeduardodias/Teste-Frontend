@@ -3,6 +3,7 @@ import { Flex, Image } from '@chakra-ui/react'
 export function Companies(): JSX.Element {
   return (
     <Flex
+      as="section"
       align="center"
       justify="space-between"
       mt="8.37rem"
