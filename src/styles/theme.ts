@@ -20,8 +20,6 @@ export const theme = extendTheme({
       body: {
         bgColor: 'purple.800',
         bgImage: 'url(/background.png)',
-        bgPosition: 'center',
-        bgRepeat: 'no-repeat',
 
         color: 'white',
       },
