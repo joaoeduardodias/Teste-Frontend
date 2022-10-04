@@ -8,6 +8,7 @@ import {
   // eslint-disable-next-line prettier/prettier
   useBreakpointValue,
 } from '@chakra-ui/react'
+import Link from 'next/link'
 
 export function Hero(): JSX.Element {
   const showImageIllustration = useBreakpointValue({ base: false, lg: true })
@@ -72,7 +73,9 @@ export function Hero(): JSX.Element {
             color="white"
             variant="outline"
           >
-            Ver planos
+            <Link href="#plans" passHref>
+              Ver planos
+            </Link>
           </Button>
         </Stack>
       </Flex>

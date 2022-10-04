@@ -1,16 +1,19 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
 
-import { Background } from '../components/Background'
-import { Companies } from '../components/Companies'
-import { Footer } from '../components/Footer'
-import { Header } from '../components/Header'
-import { Hero } from '../components/Hero'
-import { Plans } from '../components/Plans'
+import { Background } from '../components/Landing/Background'
+import { Companies } from '../components/Landing/Companies'
+import { Footer } from '../components/Landing/Footer'
+import { Header } from '../components/Landing/Header'
+import { Hero } from '../components/Landing/Hero'
+import { Plans } from '../components/Landing/Plans'
 
 const Home: NextPage = () => (
   <>
     <Background />
-
+    <Head>
+      <title>PontoGo | Seu sistema de ponto online</title>
+    </Head>
     <Header />
     <Hero />
     <Companies />

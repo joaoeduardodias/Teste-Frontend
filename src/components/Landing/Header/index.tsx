@@ -17,7 +17,7 @@ import {
 import Link from 'next/link'
 import { List } from 'phosphor-react'
 
-import { useMenuDrawer } from '../../contexts/MenuDrawerContext'
+import { useMenuDrawer } from '../../../contexts/Landing/MenuDrawerContext'
 
 export function Header(): JSX.Element {
   const { isOpen, onClose, onOpen } = useMenuDrawer()
@@ -56,7 +56,7 @@ export function Header(): JSX.Element {
               <Text>Planos</Text>
             </ChakraLink>
           </Link>
-          <Button bg="white" color="purple.700" fontWeight="normal">
+          <Button colorScheme="purple" bg="white" fontWeight="normal">
             <Link href="/signIn" passHref>
               Fazer login
             </Link>

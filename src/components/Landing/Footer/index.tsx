@@ -7,7 +7,6 @@ export function Footer(): JSX.Element {
         w="100%"
         borderY="1px"
         borderColor="purple.700"
-        mt="120px"
         minH="6.25rem"
         justify="center"
         align="center"

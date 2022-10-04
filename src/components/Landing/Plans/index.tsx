@@ -5,7 +5,7 @@ import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react'
 import { ArrowLeft, ArrowRight } from 'phosphor-react'
 
-import { PlansData } from '../../utils/Plans'
+import { PlansData } from '../../../utils/Landing/Plans'
 import { Plan } from './Plan'
 
 export function Plans(): JSX.Element {
@@ -41,6 +41,7 @@ export function Plans(): JSX.Element {
 
   return (
     <Flex
+      id="plans"
       align="center"
       justify="center"
       w="90%"
@@ -48,6 +49,7 @@ export function Plans(): JSX.Element {
       mx="auto"
       direction="column"
       mt="5.62rem"
+      mb="7.5rem"
     >
       <Heading
         as="h2"

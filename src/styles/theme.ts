@@ -23,6 +23,17 @@ export const theme = extendTheme({
 
         color: 'white',
       },
+      '*::-webkit-scrollbar': {
+        w: '10px',
+        // h: '5px',
+      },
+      '*::-webkit-scrollbar-thumb': {
+        bg: 'purple.400',
+        rounded: 'md',
+      },
+      '*::-webkit-scrollbar-track': {
+        bg: 'purple.700',
+      },
     },
   },
 })
