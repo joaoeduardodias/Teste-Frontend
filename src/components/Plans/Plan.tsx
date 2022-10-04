@@ -6,14 +6,14 @@ interface PlanProps {
   price: number
   colaborators: string | number
   advantages: number
-
+  number: number
   current?: boolean
   showButton: boolean
 }
 
 export function Plan({
   advantages,
-
+  number,
   colaborators,
   price,
   showButton,
@@ -30,9 +30,11 @@ export function Plan({
         rounded="md"
         backdropFilter="auto"
         backdropBlur="2.5px"
-        className="keen-slider__slide slide-content"
+        className={`keen-slider__slide number-slide${number}`}
         bg="purple.300"
+        zIndex="50"
         h="491px"
+        w="333.333px"
       >
         <Text fontSize="xl" mt="10">
           Plano {type}
@@ -127,7 +129,7 @@ export function Plan({
         )}
 
         {showButton && (
-          <Flex className="mt-[30px]">
+          <Flex mt="30px">
             <Button colorScheme="purple">Assinar agora</Button>
           </Flex>
         )}
@@ -146,7 +148,7 @@ export function Plan({
         backdropBlur="2.5px"
         h="411px"
         opacity="30"
-        className="keen-slider__slide slide-content"
+        className={`keen-slider__slide number-slide${number}`}
       >
         <Text fontSize="xl" mt="10">
           Plano {type}

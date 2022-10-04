@@ -15,7 +15,13 @@ export function Plans(): JSX.Element {
 
   const [ref, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
+
     loop: true,
+    mode: 'snap',
+    slides: {
+      origin: 'center',
+      perView: 1,
+    },
 
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
@@ -26,7 +32,7 @@ export function Plans(): JSX.Element {
 
     breakpoints: {
       '(min-width: 450px)': {
-        slides: { perView: 1 },
+        slides: { perView: 1, origin: 'center' },
       },
       '(min-width: 1025px)': {
         slides: { perView: 2, spacing: -20, origin: 'center' },
@@ -35,12 +41,18 @@ export function Plans(): JSX.Element {
         slides: { perView: 3, spacing: -20, origin: 'center' },
       },
     },
-
-    slides: { perView: 1, origin: 'center' },
   })
 
   return (
-    <Flex align="center" justify="center" direction="column" mt="5.62rem">
+    <Flex
+      align="center"
+      justify="center"
+      w="90%"
+      maxW="1140px"
+      mx="auto"
+      direction="column"
+      mt="5.62rem"
+    >
       <Heading as="h2" fontSize="2.5rem" fontWeight="800">
         Encontre o plano perfeito
       </Heading>
@@ -59,16 +71,17 @@ export function Plans(): JSX.Element {
       {/* Slide */}
 
       <Grid
-        templateColumns="16px auto 16px"
+        templateColumns="repeat(3,auto)"
         justifyContent="center"
         alignItems="center"
+        mt="4.37rem"
       >
         <Icon
           as={ArrowLeft}
           color="white"
           fontWeight="bold"
           fontSize="2xl"
-          mr="20"
+          mr="3"
           cursor="pointer"
           zIndex="50"
           onClick={(e: any) =>
@@ -78,41 +91,24 @@ export function Plans(): JSX.Element {
 
         <Flex
           ref={ref}
-          mt="4.37rem"
           maxW={['350px', '750px', '960px']}
           columnGap="10"
-          // zIndex="0"
+          zIndex="0"
           align="center"
           className="keen-slider"
         >
-          {Object.entries(PlansData).map(([key, value]) => {
-            if (value.current === currentSlide) {
-              return (
-                <Plan
-                  key={key}
-                  current
-                  price={value.price}
-                  colaborators={value.colaborators}
-                  type={value.title}
-                  advantages={value.advantages}
-                  showButton={value.current === currentSlide}
-                />
-              )
-            }
-            if (value.current !== currentSlide) {
-              return (
-                <Plan
-                  key={key}
-                  price={value.price}
-                  colaborators={value.colaborators}
-                  type={value.title}
-                  advantages={value.advantages}
-                  showButton={value.current === currentSlide}
-                />
-              )
-            }
-            return <h1>tests</h1>
-          })}
+          {Object.entries(PlansData).map(([key, value]) => (
+            <Plan
+              key={key}
+              number={value.current}
+              current={value.current === currentSlide}
+              price={value.price}
+              colaborators={value.colaborators}
+              type={value.title}
+              advantages={value.advantages}
+              showButton={value.current === currentSlide}
+            />
+          ))}
         </Flex>
 
         <Icon
