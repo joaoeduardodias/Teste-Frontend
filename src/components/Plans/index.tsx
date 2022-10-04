@@ -18,10 +18,6 @@ export function Plans(): JSX.Element {
 
     loop: true,
     mode: 'snap',
-    slides: {
-      origin: 'center',
-      perView: 1,
-    },
 
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
@@ -32,7 +28,7 @@ export function Plans(): JSX.Element {
 
     breakpoints: {
       '(min-width: 450px)': {
-        slides: { perView: 1, origin: 'center' },
+        slides: { perView: 1, spacing: 3, origin: 'center' },
       },
       '(min-width: 1025px)': {
         slides: { perView: 2, spacing: -20, origin: 'center' },
@@ -53,14 +49,18 @@ export function Plans(): JSX.Element {
       direction="column"
       mt="5.62rem"
     >
-      <Heading as="h2" fontSize="2.5rem" fontWeight="800">
+      <Heading
+        as="h2"
+        fontSize={['1.3rem', '1.3rem', '2.5rem']}
+        fontWeight="800"
+      >
         Encontre o plano perfeito
       </Heading>
       <Text
-        w="40.06rem"
+        maxW="40.06rem"
         mt="0.625rem"
         fontWeight="400"
-        fontSize="1.25rem"
+        fontSize={['0.9rem', '1rem', '1.25rem']}
         lineHeight="30px"
         textAlign="center"
       >
@@ -92,7 +92,6 @@ export function Plans(): JSX.Element {
         <Flex
           ref={ref}
           maxW={['350px', '750px', '960px']}
-          columnGap="10"
           zIndex="0"
           align="center"
           className="keen-slider"

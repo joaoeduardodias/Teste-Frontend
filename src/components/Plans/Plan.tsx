@@ -1,4 +1,4 @@
-import { Button, Flex, Heading, Text } from '@chakra-ui/react'
+import { Button, Flex, Heading, Icon, Text, VStack } from '@chakra-ui/react'
 import { Check, X } from 'phosphor-react'
 
 interface PlanProps {
@@ -29,20 +29,34 @@ export function Plan({
         borderColor="purple.700"
         backdropFilter="auto"
         backdropBlur="2.5px"
-        bg="#984cca40"
+        bg="#752aa740"
         rounded="md"
         className={`keen-slider__slide number-slide${number}`}
         zIndex="50"
         h="491px"
         w="333.333px"
       >
-        <Text fontSize="xl" mt="10">
+        <Text
+          fontSize={['1rem', '1rem', '1.2rem', 'xl']}
+          mt={['5', '5', '7', '10']}
+        >
           Plano {type}
         </Text>
-        <Heading as="h2" fontSize="5xl" fontWeight="800" mt="5">
+        <Heading
+          as="h2"
+          fontSize={['4xl', '4xl', '4xl', '5xl']}
+          fontWeight="800"
+          mt={['3', '3', '3', '5']}
+        >
           R$ {price}
         </Heading>
-        <Text as="span" color="purple.700" fontWeight="light" mt="2">
+        <Text
+          as="span"
+          color="purple.400"
+          fontSize={['0.9rem', '1rem', '1rem']}
+          fontWeight="light"
+          mt={['1', '2']}
+        >
           {colaborators === 'unlimited' ? (
             <>Acessos ilimitados</>
           ) : (
@@ -51,81 +65,83 @@ export function Plan({
         </Text>
 
         {advantages === 3 && (
-          <Flex direction="column" gap="4" mt="5">
+          <VStack align="start" spacing="4" mt="5">
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Área de meus registros</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Área de meus registros</Text>
             </Flex>
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Dashboard</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Dashboard</Text>
             </Flex>
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text> Acesso de {colaborators} colaboradores</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>
+                Acesso de {colaborators} colaboradores
+              </Text>
             </Flex>
 
             <Flex align="center" gap="3" opacity="30">
-              <X size={18} />
-              <Text>Suporte exclusivo</Text>
+              <Icon as={X} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Suporte exclusivo</Text>
             </Flex>
             <Flex align="center" gap="3" opacity="30">
-              <X size={18} />
-              <Text>Email corporativo</Text>
+              <Icon as={X} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Email corporativo</Text>
             </Flex>
-          </Flex>
+          </VStack>
         )}
 
         {advantages === 4 && (
-          <Flex direction="column" gap="4" mt="5">
+          <VStack align="start" gap="4" mt="5">
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Área de meus registros</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Área de meus registros</Text>
             </Flex>
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Dashboard</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Dashboard</Text>
             </Flex>
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Acesso de {colaborators} colaboradores</Text>
-            </Flex>
-
-            <Flex align="center" gap="3" opacity="30">
-              <X size={18} />
-              <Text>Suporte exclusivo</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>
+                Acesso de {colaborators} colaboradores
+              </Text>
             </Flex>
             <Flex align="center" gap="3" opacity="30">
-              <X size={18} />
-              <Text>Email corporativo</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Email corporativo</Text>
             </Flex>
-          </Flex>
+            <Flex align="center" gap="3" opacity="30">
+              <Icon as={X} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Suporte exclusivo</Text>
+            </Flex>
+          </VStack>
         )}
 
         {advantages === 5 && (
-          <Flex direction="column" gap="4" mt="5">
+          <VStack align="start" gap="4" mt="5">
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Área de meus registros</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Área de meus registros</Text>
             </Flex>
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Dashboard</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Dashboard</Text>
             </Flex>
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Acesso ilimitados</Text>
-            </Flex>
-
-            <Flex align="center" gap="3" opacity="30">
-              <X size={18} />
-              <Text>Suporte exclusivo</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Acesso ilimitados</Text>
             </Flex>
             <Flex align="center" gap="3" opacity="30">
-              <X size={18} />
-              <Text>Email corporativo</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Suporte exclusivo</Text>
             </Flex>
-          </Flex>
+            <Flex align="center" gap="3" opacity="30">
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Email corporativo</Text>
+            </Flex>
+          </VStack>
         )}
 
         {showButton && (
@@ -165,81 +181,83 @@ export function Plan({
         </Text>
 
         {advantages === 3 && (
-          <Flex direction="column" gap="4" mt="5">
+          <VStack align="start" spacing="4" mt="5">
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Área de meus registros</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Área de meus registros</Text>
             </Flex>
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Dashboard</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Dashboard</Text>
             </Flex>
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text> Acesso de {colaborators} colaboradores</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>
+                Acesso de {colaborators} colaboradores
+              </Text>
             </Flex>
 
             <Flex align="center" gap="3" opacity="30">
-              <X size={18} />
-              <Text>Suporte exclusivo</Text>
+              <Icon as={X} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Suporte exclusivo</Text>
             </Flex>
             <Flex align="center" gap="3" opacity="30">
-              <X size={18} />
-              <Text>Email corporativo</Text>
+              <Icon as={X} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Email corporativo</Text>
             </Flex>
-          </Flex>
+          </VStack>
         )}
 
         {advantages === 4 && (
-          <Flex direction="column" gap="4" mt="5">
+          <VStack align="start" gap="4" mt="5">
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Área de meus registros</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Área de meus registros</Text>
             </Flex>
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Dashboard</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Dashboard</Text>
             </Flex>
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Acesso de {colaborators} colaboradores</Text>
-            </Flex>
-
-            <Flex align="center" gap="3" opacity="30">
-              <X size={18} />
-              <Text>Suporte exclusivo</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>
+                Acesso de {colaborators} colaboradores
+              </Text>
             </Flex>
             <Flex align="center" gap="3" opacity="30">
-              <X size={18} />
-              <Text>Email corporativo</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Email corporativo</Text>
             </Flex>
-          </Flex>
+            <Flex align="center" gap="3" opacity="30">
+              <Icon as={X} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Suporte exclusivo</Text>
+            </Flex>
+          </VStack>
         )}
 
         {advantages === 5 && (
-          <Flex direction="column" gap="4" mt="5">
+          <VStack align="start" gap="4" mt="5">
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Área de meus registros</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Área de meus registros</Text>
             </Flex>
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Dashboard</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Dashboard</Text>
             </Flex>
             <Flex align="center" gap="3">
-              <Check size={18} />
-              <Text>Acesso ilimitados</Text>
-            </Flex>
-
-            <Flex align="center" gap="3" opacity="30">
-              <X size={18} />
-              <Text>Suporte exclusivo</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Acesso ilimitados</Text>
             </Flex>
             <Flex align="center" gap="3" opacity="30">
-              <X size={18} />
-              <Text>Email corporativo</Text>
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Suporte exclusivo</Text>
             </Flex>
-          </Flex>
+            <Flex align="center" gap="3" opacity="30">
+              <Icon as={Check} fontSize={18} />
+              <Text fontSize={['0.8rem', '1rem']}>Email corporativo</Text>
+            </Flex>
+          </VStack>
         )}
       </Flex>
     )

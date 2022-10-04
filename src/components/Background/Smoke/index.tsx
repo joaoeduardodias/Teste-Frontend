@@ -26,7 +26,7 @@ export function Smoke({
       alt="fumaça"
       zIndex="-1"
       mix-blend-mode="hard-light"
-      opacity="0.5"
+      opacity="0.33"
       w="619px"
       h="546px"
     />

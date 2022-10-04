@@ -11,7 +11,7 @@ export function Background(): JSX.Element {
       <Star src="./Star3.png" top="46%" left="79%" />
       <Star src="./Star5.png" top="63%" left="83%" />
       <Star src="./Star2.png" top="86%" left="4%" />
-      <Star src="./Star6.png" top="91%" left="83%" />
+      <Star src="./Star6.png" top="91%" left="81%" />
     </>
   )
 }
