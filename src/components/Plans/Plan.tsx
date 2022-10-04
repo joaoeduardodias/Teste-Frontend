@@ -33,7 +33,7 @@ export function Plan({
         rounded="md"
         className={`keen-slider__slide number-slide${number}`}
         zIndex="50"
-        h="491px"
+        minH={['26.25rem', '27.3rem', '30.6875rem']}
         w="333.333px"
       >
         <Text
@@ -50,6 +50,7 @@ export function Plan({
         >
           R$ {price}
         </Heading>
+
         <Text
           as="span"
           color="purple.400"
@@ -58,7 +59,7 @@ export function Plan({
           mt={['1', '2']}
         >
           {colaborators === 'unlimited' ? (
-            <>Acessos ilimitados</>
+            <>Acesso ilimitado</>
           ) : (
             <>Uso de {colaborators} colaboradores</>
           )}
@@ -131,7 +132,9 @@ export function Plan({
             </Flex>
             <Flex align="center" gap="3">
               <Icon as={Check} fontSize={18} />
-              <Text fontSize={['0.8rem', '1rem']}>Acesso ilimitados</Text>
+              <Text fontSize={['0.8rem', '1rem']}>
+                Acesso de {colaborators} colaboradores
+              </Text>
             </Flex>
             <Flex align="center" gap="3" opacity="30">
               <Icon as={Check} fontSize={18} />
@@ -145,7 +148,7 @@ export function Plan({
         )}
 
         {showButton && (
-          <Flex mt="30px">
+          <Flex mt="30px" mb="4">
             <Button colorScheme="purple">Assinar agora</Button>
           </Flex>
         )}
@@ -162,7 +165,7 @@ export function Plan({
         rounded="md"
         backdropFilter="auto"
         backdropBlur="2.5px"
-        h="411px"
+        minH={['21.875rem', '21.875rem', '25.6875rem']}
         opacity="30"
         className={`keen-slider__slide number-slide${number}`}
       >
@@ -247,7 +250,9 @@ export function Plan({
             </Flex>
             <Flex align="center" gap="3">
               <Icon as={Check} fontSize={18} />
-              <Text fontSize={['0.8rem', '1rem']}>Acesso ilimitados</Text>
+              <Text fontSize={['0.8rem', '1rem']}>
+                Acesso de {colaborators} colaboradores
+              </Text>
             </Flex>
             <Flex align="center" gap="3" opacity="30">
               <Icon as={Check} fontSize={18} />

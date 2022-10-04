@@ -10,7 +10,7 @@ export const PlansData = {
     title: 'Ouro',
     price: 100,
     colaborators: 20,
-    advantages: 4,
+    advantages: 5,
     current: 1,
   },
 
@@ -18,7 +18,7 @@ export const PlansData = {
     title: 'Platina',
     price: 200,
     colaborators: 'unlimited',
-    advantages: 5,
+    advantages: 4,
     current: 2,
   },
   BRONZE: {
