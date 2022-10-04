@@ -27,11 +27,11 @@ export function Plan({
         align="center"
         border="1px"
         borderColor="purple.700"
-        rounded="md"
         backdropFilter="auto"
         backdropBlur="2.5px"
+        bg="#984cca40"
+        rounded="md"
         className={`keen-slider__slide number-slide${number}`}
-        bg="purple.300"
         zIndex="50"
         h="491px"
         w="333.333px"

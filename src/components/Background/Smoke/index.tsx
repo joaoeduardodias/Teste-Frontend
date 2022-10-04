@@ -1,7 +1,8 @@
 import { Image } from '@chakra-ui/react'
 
 interface SmokeProps {
-  top: string
+  top?: string
+  bottom?: string
   src: string
   right?: string
   left?: string
@@ -11,6 +12,7 @@ export function Smoke({
   right = '0',
   left,
   src,
+  bottom,
   top,
 }: SmokeProps): JSX.Element {
   return (
@@ -20,6 +22,7 @@ export function Smoke({
       right={right}
       src={src}
       left={left}
+      bottom={bottom}
       alt="fumaça"
       zIndex="-1"
       mix-blend-mode="hard-light"

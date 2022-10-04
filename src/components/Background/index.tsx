@@ -4,14 +4,14 @@ import { Star } from './Star'
 export function Background(): JSX.Element {
   return (
     <>
-      <Smoke src="./fumaca1.png" top="-63px" />
-      <Smoke src="./fumaca2.png" left="0" top="1458.73px" />
-      <Smoke src="./fumaca3.png" top="1847px" />
-      <Star src="./Star4.png" top="36.57rem" left="37.84rem" />
-      <Star src="./Star3.png" top="52.38rem" left="73.71rem" />
-      <Star src="./Star5.png" top="69.44rem" left="71.68rem" />
-      <Star src="./Star2.png" top="98.76rem" left="7.75rem" />
-      <Star src="./Star6.png" top="101.56rem" left="76.31rem" />
+      <Smoke src="./fumaca1.png" top="-5%" />
+      <Smoke src="./fumaca2.png" left="0" top="24%" />
+      <Smoke src="./fumaca3.png" bottom="1%" />
+      <Star src="./Star4.png" top="30%" left="42%" />
+      <Star src="./Star3.png" top="46%" left="82%" />
+      <Star src="./Star5.png" top="63%" left="83%" />
+      <Star src="./Star2.png" top="86%" left="4%" />
+      <Star src="./Star6.png" top="91%" left="85%" />
     </>
   )
 }
