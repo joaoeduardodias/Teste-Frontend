@@ -2,8 +2,8 @@ import {
   Button,
   Flex,
   Heading,
-  HStack,
   Image,
+  Stack,
   Text,
   // eslint-disable-next-line prettier/prettier
   useBreakpointValue,
@@ -36,21 +36,31 @@ export function Hero(): JSX.Element {
           textTransform="uppercase"
           fontWeight="300"
           letterSpacing="16.5%"
+          fontSize={['0.8rem', '1rem', '1.5rem']}
         >
           Esquece o ponto manual
         </Text>
-        <Heading fontWeight="800" fontSize="40px" lineHeight="60px">
+        <Heading
+          fontWeight="800"
+          fontSize={['2.3rem', '2.3rem', '2.5rem']}
+          lineHeight="60px"
+        >
           Chegou a nova realidade para{' '}
           <Text display="inline" color="purple.400">
             Controle de Pontos
           </Text>
         </Heading>
-        <Text as="p" w="476px" fontSize="18px" lineHeight="27px">
+        <Text
+          as="p"
+          maxW="476px"
+          fontSize={['1rem', '1.125rem']}
+          lineHeight="27px"
+        >
           Com o PontoGo seus colaboradores poderão bater seus pontos de forma
           fácil e rápida, possuindo também uma Dashboard intuitiva.
         </Text>
 
-        <HStack spacing="15px" mt="30px">
+        <Stack spacing="15px" mt="30px" direction={['column', 'column', 'row']}>
           <Button w="160px" h="50px" colorScheme="purple" fontWeight="500">
             Assinar agora
           </Button>
@@ -64,7 +74,7 @@ export function Hero(): JSX.Element {
           >
             Ver planos
           </Button>
-        </HStack>
+        </Stack>
       </Flex>
 
       {showImageIllustration && (
