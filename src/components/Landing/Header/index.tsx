@@ -15,17 +15,24 @@ import {
   VStack,
 } from '@chakra-ui/react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { List } from 'phosphor-react'
 
 import { useMenuDrawer } from '../../../contexts/Landing/MenuDrawerContext'
 
 export function Header(): JSX.Element {
+  const router = useRouter()
+
   const { isOpen, onClose, onOpen } = useMenuDrawer()
   const showToggleButton = useBreakpointValue({
     base: true,
     md: false,
     lg: false,
   })
+
+  function handleSignIn() {
+    router.push('/app/login')
+  }
 
   return (
     <Flex
@@ -56,10 +63,8 @@ export function Header(): JSX.Element {
               <Text>Planos</Text>
             </ChakraLink>
           </Link>
-          <Button color="purple.700" fontWeight="normal">
-            <Link href="/app/login" passHref>
-              Fazer login
-            </Link>
+          <Button color="purple.700" fontWeight="normal" onClick={handleSignIn}>
+            Fazer login
           </Button>
         </Flex>
       ) : (

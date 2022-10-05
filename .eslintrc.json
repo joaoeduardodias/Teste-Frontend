@@ -22,6 +22,7 @@
   "plugins": ["react", "@typescript-eslint", "import-helpers", "jest"],
   "rules": {
     "arrow-parens": "off",
+    "react/jsx-no-bind": "off",
     "import/no-unresolved": "off",
     "react/require-default-props": "off",
     "import/extensions": "off",

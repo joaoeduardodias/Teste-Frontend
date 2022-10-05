@@ -1,8 +1,14 @@
 import { Button, Flex, Heading, VStack } from '@chakra-ui/react'
+import { useRouter } from 'next/router'
 
 import { Input } from '../Input'
 
 export function FormSignIn(): JSX.Element {
+  const router = useRouter()
+  function SignIn() {
+    router.push('/app/meus-registros')
+  }
+
   return (
     <Flex direction="column" align="start" justify="center" w="400px">
       <Heading
@@ -23,6 +29,7 @@ export function FormSignIn(): JSX.Element {
           w="100%"
           fontWeight="400"
           _hover={{ bg: 'purple.800' }}
+          onClick={SignIn}
         >
           Entrar
         </Button>
