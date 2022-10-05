@@ -56,6 +56,7 @@ export function Input({ name, placeholder, type }: InputProps): JSX.Element {
                   size="md"
                   onClick={handleClickShowPassword}
                   color="purple.700"
+                  variant="unstyled"
                 >
                   {showPassword ? (
                     <Icon icon="ant-design:eye-filled" fontSize={24} />

@@ -19,7 +19,7 @@ export function FormSignIn(): JSX.Element {
       >
         Faça login
       </Heading>
-      <VStack spacing="1.25rem" mt="1.43rem">
+      <VStack spacing="1.25rem" mt="1.43rem" w="100%">
         <Input type="text" name="Email" placeholder="example@email.com" />
         <Input type="password" name="Senha" placeholder="*************" />
         <Button

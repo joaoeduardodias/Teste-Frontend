@@ -70,10 +70,24 @@ const Login: NextPage = () => (
           </Text>
         </Flex>
       </GridItem>
-      <GridItem display="flex" flexDirection="column" alignItems="center">
-        <Flex direction="column" align="start">
-          <Image src="/app/logoCor.svg" w="20.18rem" />
-          <FormSignIn />
+      <GridItem
+        display="flex"
+        w="100%"
+        h="100%"
+        flexDirection="column"
+        alignItems="center"
+      >
+        <Flex
+          direction="column"
+          align="center"
+          justify="center"
+          w="100%"
+          h="100%"
+        >
+          <Flex align="start" direction="column">
+            <Image src="/app/logoCor.svg" w="20.18rem" />
+            <FormSignIn />
+          </Flex>
         </Flex>
       </GridItem>
     </Grid>
