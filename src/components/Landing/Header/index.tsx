@@ -56,8 +56,8 @@ export function Header(): JSX.Element {
               <Text>Planos</Text>
             </ChakraLink>
           </Link>
-          <Button colorScheme="purple" bg="white" fontWeight="normal">
-            <Link href="/signIn" passHref>
+          <Button color="purple.700" fontWeight="normal">
+            <Link href="/app/login" passHref>
               Fazer login
             </Link>
           </Button>
@@ -93,7 +93,7 @@ export function Header(): JSX.Element {
                       </ChakraLink>
                     </Link>
                     <Button bg="white" color="purple.700" fontWeight="normal">
-                      <Link href="/signIn" passHref>
+                      <Link href="/app/login" passHref>
                         Fazer login
                       </Link>
                     </Button>
