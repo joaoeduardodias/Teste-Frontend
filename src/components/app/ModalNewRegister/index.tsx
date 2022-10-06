@@ -27,6 +27,8 @@ export function ModalNewRegister({
 }: ModalNewRegisterProps): JSX.Element {
   const initialRef = useRef(null)
 
+  const getDateandHours = new Date()
+
   return (
     <Modal initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
       <ModalOverlay onClick={onClose} />
@@ -53,10 +55,10 @@ export function ModalNewRegister({
         <ModalBody>
           <VStack spacing="5px" color="purple.700">
             <Heading fontWeight="700" fontSize="1.875rem">
-              10:30
+              {`${getDateandHours.getHours()}:${getDateandHours.getMinutes()}`}
             </Heading>
             <Text fontSize="1rem" opacity="0.5">
-              26/09/2021
+              {getDateandHours.toLocaleDateString()}
             </Text>
           </VStack>
           <VStack mt="20px" mb="3.75rem" spacing="10px">
