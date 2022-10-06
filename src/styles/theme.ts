@@ -12,6 +12,7 @@ export const theme = extendTheme({
       '400': '#8A53FF',
     },
     gray: {
+      '400': '#00000014',
       '600': '#20292E',
     },
   },
