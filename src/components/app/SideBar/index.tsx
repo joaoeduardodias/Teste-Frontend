@@ -1,5 +1,7 @@
 import { Flex, Image } from '@chakra-ui/react'
 
+import { NavItem } from './NavItem'
+
 export function SideBar(): JSX.Element {
   return (
     <Flex
@@ -22,9 +24,9 @@ export function SideBar(): JSX.Element {
       >
         <Image src="/app/logoCor.svg" alt="Logo ponto go" width="90%" />
       </Flex>
-      <p>terwgtrseg</p>
-      <p>terwgtrseg</p>
-      <p>terwgtrseg</p>
+      <NavItem imgSrc="/app/editorIcon.svg" title="Meus registros" />
+      <NavItem imgSrc="/app/editorIcon.svg" title="Meus registros" />
+      <NavItem imgSrc="/app/editorIcon.svg" title="Meus registros" />
     </Flex>
   )
 }
