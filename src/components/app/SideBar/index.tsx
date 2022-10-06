@@ -1,9 +1,12 @@
 import { Button, Flex, Image, Stack, Text } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
+import { useRouter } from 'next/router'
 
 import { NavItem } from './NavItem'
 
 export function SideBar(): JSX.Element {
+  const router = useRouter()
+
   return (
     <Flex
       w="200px"
@@ -25,8 +28,37 @@ export function SideBar(): JSX.Element {
         <Image src="/app/logoCor.svg" alt="Logo ponto go" width="90%" />
       </Flex>
       <Stack mb="auto" w="100%">
-        <NavItem imgSrc="/app/iconDash.svg" title="Dashboard" current />
-        <NavItem imgSrc="/app/editorIcon.svg" title="Meus registros" />
+        {router.asPath === '/app/meus-registros' ? (
+          <>
+            <NavItem
+              imgSrc="/app/iconDash.svg"
+              title="Dashboard"
+              link="/app/dashboard"
+            />
+            <NavItem
+              imgSrc="/app/editorIcon.svg"
+              title="Meus registros"
+              current
+              link="/app/meus-registros"
+            />
+          </>
+        ) : (
+          router.asPath === '/app/dashboard' && (
+            <>
+              <NavItem
+                imgSrc="/app/iconDash.svg"
+                title="Dashboard"
+                current
+                link="/app/dashboard"
+              />
+              <NavItem
+                imgSrc="/app/editorIcon.svg"
+                title="Meus registros"
+                link="/app/meus-registros"
+              />
+            </>
+          )
+        )}
       </Stack>
 
       <Button w="100%" mb="2">

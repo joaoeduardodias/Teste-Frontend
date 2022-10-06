@@ -31,8 +31,13 @@ export function ModalNewRegister({
 
   return (
     <Modal initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
-      <ModalOverlay onClick={onClose} />
-      <ModalContent bg="white">
+      <ModalOverlay
+        onClick={onClose}
+        overflow="hidden"
+        backdropFilter="auto"
+        backdropBlur="2.5px"
+      />
+      <ModalContent bg="white" my="auto">
         <ModalCloseButton color="gray.600" onClick={onClose} />
         <ModalHeader mt="3.75rem">
           <Flex direction="column" align="center" justify="center">
