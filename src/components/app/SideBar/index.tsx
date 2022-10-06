@@ -1,4 +1,4 @@
-import { Button, Flex, Image, Text } from '@chakra-ui/react'
+import { Button, Flex, Image, Stack, Text } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 
 import { NavItem } from './NavItem'
@@ -24,11 +24,12 @@ export function SideBar(): JSX.Element {
       >
         <Image src="/app/logoCor.svg" alt="Logo ponto go" width="90%" />
       </Flex>
-      <NavItem imgSrc="/app/editorIcon.svg" title="Meus registros" current />
-      <NavItem imgSrc="/app/editorIcon.svg" title="Meus registros" />
-      <NavItem imgSrc="/app/editorIcon.svg" title="Meus registros" />
+      <Stack mb="auto" w="100%">
+        <NavItem imgSrc="/app/iconDash.svg" title="Dashboard" current />
+        <NavItem imgSrc="/app/editorIcon.svg" title="Meus registros" />
+      </Stack>
 
-      <Button w="100%" mt="100%">
+      <Button w="100%" mb="2">
         <Icon icon="ant-design:logout-outlined" fontSize={24} />
         <Text fontWeight="400" fontSize="1rem" ml="11px">
           Sair

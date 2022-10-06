@@ -24,9 +24,9 @@ export function NavItem({ imgSrc, title, current }: NavItemProps): JSX.Element {
           orientation="vertical"
         />
       )}
-      <Flex align="center" justify="space-between" w="87%" mx="auto" h="100%">
+      <Flex align="center" justify="start" w="87%" mx="auto" h="100%">
         <Image src={imgSrc} w="24px" h="24px" />
-        <Text fontSize="14px" color="purple.700" mt="1">
+        <Text fontSize="14px" color="purple.700" mt="1" ml="2">
           {title}
         </Text>
       </Flex>
