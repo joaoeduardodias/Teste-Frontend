@@ -10,7 +10,6 @@ import { Plan } from './Plan'
 
 export function Plans(): JSX.Element {
   const [currentSlide, setCurrentSlide] = useState(0)
-  // eslint-disable-next-line no-unused-vars
   const [loaded, setLoaded] = useState(false)
 
   const [ref, instanceRef] = useKeenSlider<HTMLDivElement>({

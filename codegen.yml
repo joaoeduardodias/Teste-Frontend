@@ -5,11 +5,14 @@ schema: 'http://test.frontend.api.brainny.cc/graphql'
 documents: './src/graphql/**/*.graphql'
 
 generates:
-  src/graphql/generated/graphql.tsx: 
-    plugins: 
+  src/graphql/generated/graphql.tsx:
+    plugins:
       - 'typescript'
       - 'typescript-operations'
       - 'typescript-react-apollo'
     config:
-      withHooks:  true
+      withHooks: true
 
+hooks:
+  afterAllFileWrite:
+    - eslint --fix

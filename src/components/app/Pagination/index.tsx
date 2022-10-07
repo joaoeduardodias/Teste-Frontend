@@ -6,7 +6,6 @@ interface PaginationProps {
   timesPerPage: number
   totalTimes: number
   curPage: number
-  // eslint-disable-next-line no-unused-vars
   paginate: (pageNumber: number) => void
 }
 const siblingsCount = 1

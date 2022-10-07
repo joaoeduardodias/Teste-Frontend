@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useState } from 'react'
 
 import {
@@ -8,7 +7,7 @@ import {
   Input as ChakraInput,
   InputGroup,
   InputRightElement,
-  Link as ChakraLink
+  Link as ChakraLink,
 } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import Link from 'next/link'

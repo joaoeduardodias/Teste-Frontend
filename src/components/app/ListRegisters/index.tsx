@@ -15,7 +15,6 @@ interface ListRegistersProps {
   timesPerPage: number
   totalTimes: number
   currentPage: number
-  // eslint-disable-next-line no-unused-vars
   paginate: (pageNumber: number) => void
 }
 

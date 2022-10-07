@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import * as Apollo from '@apollo/client'
 import { gql } from '@apollo/client'
 
