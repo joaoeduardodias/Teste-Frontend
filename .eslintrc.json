@@ -20,8 +20,10 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint", "import-helpers", "jest"],
+  "ignorePatterns": ["./src/graphql/generated/graphql.tsx"],
   "rules": {
     "arrow-parens": "off",
+    "no-use-before-define":"off",
     "no-return-assign": "off",
     "no-shadow":"off",
     "react/jsx-no-bind": "off",

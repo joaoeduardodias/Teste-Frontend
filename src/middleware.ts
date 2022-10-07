@@ -76,7 +76,6 @@ export async function middleware(req: NextRequest) {
       }
     }
   } catch (error) {
-    console.log(error)
     response.cookies.set('nextAuth.token', '')
     response.cookies.delete('nextAuth.token')
     response.cookies.clear()

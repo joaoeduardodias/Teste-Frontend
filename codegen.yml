@@ -13,6 +13,3 @@ generates:
     config:
       withHooks:  true
 
-hooks:
-  afterAllFileWrite: 
-    - eslint --fix
