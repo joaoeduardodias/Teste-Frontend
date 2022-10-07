@@ -3,6 +3,8 @@ import { Button } from '@chakra-ui/react'
 interface PaginationItemProps {
   isCurrent?: boolean
   number: number
+  // eslint-disable-next-line react/no-unused-prop-types, no-unused-vars
+  paginate: (pageNumber: number) => void
 }
 
 export function PaginationItem({

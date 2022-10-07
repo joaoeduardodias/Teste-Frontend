@@ -3,7 +3,29 @@ import { Box, List, ListItem } from '@chakra-ui/react'
 import { Pagination } from '../Pagination'
 import { Register } from '../Register'
 
-export function ListRegisters(): JSX.Element {
+interface ListRegistersProps {
+  registeredTimes: {
+    id: string
+    created_at: string
+    user: {
+      name: string
+      id: string
+    }
+  }[]
+  timesPerPage: number
+  totalTimes: number
+  currentPage: number
+  // eslint-disable-next-line no-unused-vars
+  paginate: (pageNumber: number) => void
+}
+
+export function ListRegisters({
+  registeredTimes,
+  currentPage,
+  paginate,
+  timesPerPage,
+  totalTimes,
+}: ListRegistersProps): JSX.Element {
   return (
     <List mt="1.87rem" mb="1rem" spacing={15} color="gray.600" w="100%">
       <ListItem fontSize="1.375rem" fontWeight="600" display="flex">
@@ -11,13 +33,24 @@ export function ListRegisters(): JSX.Element {
         <Box w="12rem">Data</Box>
         <Box>Hora</Box>
       </ListItem>
+      {registeredTimes.map(time => (
+        <Register
+          key={time.id}
+          date={new Date(time.created_at).toLocaleDateString()}
+          hour={`${new Date(time.created_at).getHours()}:${new Date(
+            time.created_at
+          ).getMinutes()} `}
+          id={Number(time.user.id)}
+          name={time.user.name}
+        />
+      ))}
 
-      <Register date="06/10/22" hour="18:30h" id={1} name="João Dias" />
-      <Register date="06/10/22" hour="18:30h" id={1} name="João Dias" />
-      <Register date="06/10/22" hour="18:30h" id={1} name="João Dias" />
-      <Register date="06/10/22" hour="18:30h" id={1} name="João Dias" />
-
-      <Pagination />
+      <Pagination
+        curPage={currentPage}
+        paginate={paginate}
+        timesPerPage={timesPerPage}
+        totalTimes={totalTimes}
+      />
     </List>
   )
 }

@@ -12,18 +12,20 @@ import {
   ModalOverlay,
   Text,
   // eslint-disable-next-line prettier/prettier
-  VStack,
+  VStack
 } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 
 interface ModalNewRegisterProps {
   isOpen: boolean
   onClose: () => void
+  onTime: () => void
 }
 
 export function ModalNewRegister({
   isOpen,
   onClose,
+  onTime,
 }: ModalNewRegisterProps): JSX.Element {
   const initialRef = useRef(null)
 
@@ -75,6 +77,7 @@ export function ModalNewRegister({
               w="12.5rem"
               fontWeight="400"
               _hover={{ bg: 'purple.800' }}
+              onClick={onTime}
             >
               Bater ponto
             </Button>

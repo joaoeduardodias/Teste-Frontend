@@ -1,14 +1,14 @@
+/* eslint-disable no-unused-vars */
 import { useState } from 'react'
 
 import {
   Button,
   Flex,
+  FormLabel,
   Input as ChakraInput,
   InputGroup,
   InputRightElement,
-  Link as ChakraLink,
-  // eslint-disable-next-line prettier/prettier
-  Text,
+  Link as ChakraLink
 } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import Link from 'next/link'
@@ -17,15 +17,26 @@ interface InputProps {
   name: string
   placeholder: string
   type: 'password' | 'text'
+  value?: string
+
+  setValue: (value: string) => void
+  setIsInvalid: (value: boolean) => void
 }
 
-export function Input({ name, placeholder, type }: InputProps): JSX.Element {
+export function Input({
+  name,
+  placeholder,
+  type,
+  setIsInvalid,
+  setValue,
+  value,
+}: InputProps): JSX.Element {
   const [showPassword, setShowPassword] = useState(false)
   const handleClickShowPassword = () => setShowPassword(!showPassword)
 
   return (
     <Flex direction="column" align="start" justify="center" w="100%">
-      <Text fontSize="1.25rem">{name}</Text>
+      <FormLabel fontSize="1.25rem">{name}</FormLabel>
       {type === 'text' ? (
         <ChakraInput
           variant="outline"
@@ -35,6 +46,11 @@ export function Input({ name, placeholder, type }: InputProps): JSX.Element {
           borderColor="#171d2057"
           _hover={{ border: { opacity: 0.4, color: 'gray.600' } }}
           size="lg"
+          value={value}
+          onChange={e => {
+            setValue(e.target.value)
+            setIsInvalid(false)
+          }}
         />
       ) : (
         type === 'password' && (
@@ -49,6 +65,11 @@ export function Input({ name, placeholder, type }: InputProps): JSX.Element {
                 _hover={{ border: { opacity: 0.4, color: 'gray.600' } }}
                 size="lg"
                 type={showPassword ? 'text' : 'password'}
+                value={value}
+                onChange={e => {
+                  setValue(e.target.value)
+                  setIsInvalid(false)
+                }}
               />
               <InputRightElement>
                 <Button

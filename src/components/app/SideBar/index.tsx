@@ -1,6 +1,7 @@
 import { Button, Flex, Image, Stack, Text } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import { useRouter } from 'next/router'
+import { destroyCookie } from 'nookies'
 
 import { NavItem } from './NavItem'
 
@@ -29,39 +30,33 @@ export function SideBar(): JSX.Element {
       </Flex>
       <Stack mb="auto" w="100%">
         {router.asPath === '/app/meus-registros' ? (
-          <>
+          <NavItem
+            imgSrc="/app/editorIcon.svg"
+            title="Meus registros"
+            current
+            link="/app/meus-registros"
+          />
+        ) : (
+          router.asPath === '/app/dashboard' && (
             <NavItem
               imgSrc="/app/iconDash.svg"
               title="Dashboard"
+              current
               link="/app/dashboard"
             />
-            <NavItem
-              imgSrc="/app/editorIcon.svg"
-              title="Meus registros"
-              current
-              link="/app/meus-registros"
-            />
-          </>
-        ) : (
-          router.asPath === '/app/dashboard' && (
-            <>
-              <NavItem
-                imgSrc="/app/iconDash.svg"
-                title="Dashboard"
-                current
-                link="/app/dashboard"
-              />
-              <NavItem
-                imgSrc="/app/editorIcon.svg"
-                title="Meus registros"
-                link="/app/meus-registros"
-              />
-            </>
           )
         )}
       </Stack>
 
-      <Button w="100%" mb="2">
+      <Button
+        w="100%"
+        mb="2"
+        onClick={() => {
+          destroyCookie(null, 'nextAuth.token')
+
+          router.reload()
+        }}
+      >
         <Icon icon="ant-design:logout-outlined" fontSize={24} />
         <Text fontWeight="400" fontSize="1rem" ml="11px">
           Sair
