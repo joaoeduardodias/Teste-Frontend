@@ -5,7 +5,7 @@ import {
   createHttpLink,
   gql,
   // eslint-disable-next-line prettier/prettier
-  InMemoryCache
+  InMemoryCache,
 } from '@apollo/client'
 import { Button, Flex, useDisclosure } from '@chakra-ui/react'
 import type { GetServerSideProps } from 'next'
@@ -89,6 +89,7 @@ function MyRegisters({ myId, registeredTimes }: MyRegistersProps) {
 
       onClose()
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.log(error)
     }
   }
@@ -122,7 +123,7 @@ function MyRegisters({ myId, registeredTimes }: MyRegistersProps) {
             registeredTimes={currentTimes}
             currentPage={currentPage}
             paginate={paginate}
-            timesPerPage={4}
+            timesPerPage={9}
             totalTimes={times.length}
           />
         </Flex>

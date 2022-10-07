@@ -1,4 +1,4 @@
-import { Button, Flex, Image, Stack, Text } from '@chakra-ui/react'
+import { Button, Flex, Image, Text } from '@chakra-ui/react'
 import { Icon } from '@iconify/react'
 import { useRouter } from 'next/router'
 import { destroyCookie } from 'nookies'
@@ -28,28 +28,24 @@ export function SideBar(): JSX.Element {
       >
         <Image src="/app/logoCor.svg" alt="Logo ponto go" width="90%" />
       </Flex>
-      <Stack mb="auto" w="100%">
+      <Flex mb="auto" w="100%">
         {router.asPath === '/app/meus-registros' ? (
           <NavItem
             imgSrc="/app/editorIcon.svg"
             title="Meus registros"
             current
-            link="/app/meus-registros"
           />
         ) : (
           router.asPath === '/app/dashboard' && (
-            <NavItem
-              imgSrc="/app/iconDash.svg"
-              title="Dashboard"
-              current
-              link="/app/dashboard"
-            />
+            <NavItem imgSrc="/app/iconDash.svg" title="Dashboard" current />
           )
         )}
-      </Stack>
+      </Flex>
 
       <Button
         w="100%"
+        bg="transparent"
+        _hover={{ bg: 'transparent' }}
         mb="2"
         onClick={() => {
           destroyCookie(null, 'nextAuth.token')

@@ -1,24 +1,12 @@
 import { Divider, Flex, Image, Text } from '@chakra-ui/react'
-import { useRouter } from 'next/router'
 
 interface NavItemProps {
   imgSrc: string
   title: string
   current?: boolean
-  link: string
 }
 
-export function NavItem({
-  imgSrc,
-  title,
-  current,
-  link,
-}: NavItemProps): JSX.Element {
-  const router = useRouter()
-  function handleSubmit() {
-    router.push(link)
-  }
-
+export function NavItem({ imgSrc, title, current }: NavItemProps): JSX.Element {
   return (
     <Flex
       width="100%"
@@ -36,15 +24,7 @@ export function NavItem({
           orientation="vertical"
         />
       )}
-      <Flex
-        align="center"
-        justify="start"
-        w="87%"
-        mx="auto"
-        // h="100%"
-        cursor="pointer"
-        onClick={handleSubmit}
-      >
+      <Flex align="center" justify="start" w="87%" mx="auto" cursor="pointer">
         <Image src={imgSrc} w="24px" h="24px" />
         <Text
           fontSize="14px"
