@@ -1,41 +1,77 @@
 <h1 align="center">
 
-Boilerplate of nextJS
+<img src="./public/github/logo.png"/>
 
 </h1>
 
-<p align="center">Initial project of NextJS with Typescript, Eslint, Prettier, Husky, Commitizen and Order imports.
+<p align="center">Project of  control point registered, with point listings for each user and a dashboard with point listings for all users.
 </p>
 <br>
 <br>
 
-<p align="center">If by chance the husky hooks don't work, run the command below.</p>
+<img src="./public/github/landing.png" />
+<p align="center">Landing page developed for the dissemination of the system PontoGo.</p>
 
-```bash
- yarn husky install
-```
+<br />
+<br />
+<p align="center">
+ <a href="#Technologies">Technologies</a> •
+ <a href="#Gallery system images">Images</a> •
+ <a href="#Get-Started">Get started</a> •
+ <a href="#View-Project">View Project Online</a> •
+ <a href="#Developer">Developer</a>
+</p>
+<br /> 
+<br />
 
-## 🚀 Functionalities
+## 🚀 Technologies
 
+<br>
+<br>
+<p align="center">In this Project I used the following technologies, React and NextJS to develop our web interface, GraphQL to communicate with the API, below I will list some other tools used.</p>
+<br>
 <br>
 
 - ✅ Typescript
-- ✅ NextJS
-- ✅ Eslint
-- ✅ Prettier
-- ✅ Husky
-- ✅ Commitizen
-- ✅ Order imports
+- ✅ Apollo
+- ✅ Codegen
+- ✅ Chakra UI
+- ✅ Nookies
 
+## Gallery system images
+
+<br />
+<br />
+<img src="./public/github/system.png"/>
+
+<br />
+<br />
+<img src="./public/github/system2.png"/>
 <br>
 <br>
+<br/>
+
+## Get started
+
+<br/>
+<br/>
+<p align="start">To run the project on your local machine, just clone the repository, and run the "yarn" command in the terminal to download and install the app's dependencies</p>
+
+<p align="start">Then open in your browser the url ´https://localhost:3000´</p>
+<br/>
+<br/>
+
+## View Project Online
+
+<br/>
+<h2 align="center">Link: https://teste-front-brainny.vercel.app</h3>
+<br/>
 <br/>
 
 ## 👨‍🔧 Developer
 
 ---
 
-<br/>
   <div align="center">
   <a href="https://www.linkedin.com/in/devjoaodias/">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/49342574?v=4" width="100px;" alt=""/>

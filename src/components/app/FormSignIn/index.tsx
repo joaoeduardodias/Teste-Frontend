@@ -7,7 +7,7 @@ import {
   FormHelperText,
   Heading,
   // eslint-disable-next-line prettier/prettier
-  VStack
+  VStack,
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { setCookie } from 'nookies'
@@ -23,6 +23,7 @@ export function FormSignIn(): JSX.Element {
   const router = useRouter()
 
   const [login] = useLoginMutation()
+
   async function handleLogin(e: FormEvent) {
     e.preventDefault()
 
